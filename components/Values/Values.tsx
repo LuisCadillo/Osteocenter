@@ -3,6 +3,8 @@ import { BaseContainer } from "../BaseStyle";
 import { Heading } from "../Elements";
 import Value from "./Value";
 
+import withScrollMotion from "@/components/HOCS/withScrollMotion";
+
 const Container = tw(BaseContainer)``;
 
 const Values = (): JSX.Element => {
@@ -24,4 +26,4 @@ const Values = (): JSX.Element => {
   );
 };
 
-export default Values;
+export default withScrollMotion({ Element: Values });

@@ -4,6 +4,7 @@ import { BaseContainer } from "../BaseStyle";
 import { Button, Heading } from "../Elements";
 import CustomerPictures from "./CustomerPictures";
 import HeroImage from "./HeroImage";
+import withScrollMotion from "@/components/HOCS/withScrollMotion";
 
 const Container = tw(
   BaseContainer
@@ -35,4 +36,4 @@ const Hero = (): JSX.Element => {
   );
 };
 
-export default Hero;
+export default withScrollMotion({ Element: Hero });

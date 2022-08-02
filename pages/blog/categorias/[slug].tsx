@@ -11,14 +11,20 @@ import {
 } from "../../../utils/sanity/queries";
 import { QueryClient, dehydrate, useQuery } from "react-query";
 
-import type { PostType} from "pages/blog";
+import type { PostType } from "pages/blog";
 
 import IndexLayout from "../../../components/Blog/IndexLayout";
 import { Heading } from "../../../components/Elements";
+import withScrollMotion from "@/components/HOCS/withScrollMotion";
 
 const StyledHeading = tw(
   Heading
 )`w-full text-center my-12 text-[1.625rem] leading-[2.125rem] text-primary-shade-3 md:my-20 md:text-4xl md:leading-[2.875rem]`;
+const Title = ({ children }: { children: React.ReactNode }) => (
+  <StyledHeading as="h1" primary>
+    {children}
+  </StyledHeading>
+);
 
 const Category = () => {
   const router = useRouter();
@@ -48,6 +54,7 @@ const Category = () => {
   if (isError) {
     return <p>Oh oh algo salio mal :c</p>;
   }
+  const AnimatedTitle = withScrollMotion({ Element: Title });
 
   return (
     <IndexLayout
@@ -56,9 +63,7 @@ const Category = () => {
       allPostsByCategory={postsByCategory.data}
       categoryPage
     >
-      <StyledHeading as="h1" primary>
-        {title.data}
-      </StyledHeading>
+      <AnimatedTitle>{title.data}</AnimatedTitle>
     </IndexLayout>
   );
 };

@@ -4,7 +4,7 @@ import tw, { css, styled } from "twin.macro";
 import { v4 } from "uuid";
 
 import { loader } from "./helpers";
-import withCarousel from "@/components/withCarousel";
+import withCarousel from "@/components/HOCS/withCarousel";
 
 import { Button } from "../../../Elements";
 import { Title } from "./Elements";

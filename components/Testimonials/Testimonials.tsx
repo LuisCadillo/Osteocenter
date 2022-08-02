@@ -6,7 +6,7 @@ import { BaseContainer } from "../BaseStyle";
 import Testimonial, { TestimonialType } from "./Testimonial";
 import withCarousel, {
   BaseContainer as BaseCarouselContainer,
-} from "../withCarousel";
+} from "@/components/HOCS/withCarousel";
 
 const Container = tw(BaseContainer)`flex text-center items-center flex-col`;
 const StyledCarousel = styled(BaseCarouselContainer)(() => [

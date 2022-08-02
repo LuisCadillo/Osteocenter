@@ -11,7 +11,7 @@ import {
 } from "../../utils/sanity/queries";
 
 // components
-import withCarousel from "../../components/withCarousel";
+import withCarousel from "@/components/HOCS/withCarousel";
 import { Heading } from "../../components/Elements";
 import Post from "../../components/Blog/Post";
 import IndexLayout from "../../components/Blog/IndexLayout";

@@ -9,7 +9,7 @@ import { urlForImage } from "@/utils/sanity/sanity";
 import { sanityClient } from "@/utils/sanity/sanity.server";
 import { featuredPostsQuery } from "@/utils/sanity/queries";
 
-import withCarousel from "@/components/withCarousel";
+import withCarousel from "@/components/HOCS/withCarousel";
 import useBreakPointChange from "@/components/hooks/useBreakPointChange";
 import { BaseContainer, BaseLink } from "../BaseStyle";
 import { Button, Heading, PageLink } from "../Elements";
